@@ -11,8 +11,8 @@ router.get('/', function(req, res, next) {
 // POST single champion
 router.post("/champion/scrap", function(req, res, next) {
   let url = req.body.url;
-  scrapping.champion.scrap(url, function () {
-    res.send('coucou');
+  scrapping.champion.scrap(url, function (result) {
+    res.send(result);
   });
 });
 

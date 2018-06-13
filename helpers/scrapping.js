@@ -64,8 +64,7 @@ module.exports = {
 
             rp(options)
                 .then(($) => {
-                    let result = $('h1').text();
-                    callback(result);
+                    callback($('#championName').text());
                 })
                 .catch((err) => {
                     console.log(err);

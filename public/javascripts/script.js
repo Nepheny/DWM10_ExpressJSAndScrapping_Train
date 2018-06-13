@@ -17,8 +17,7 @@ document.querySelector('main').addEventListener('click', function (el) {
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if(this.readyState == 4 && this.status == 200) {
-                debugger;
-                
+                alert(this.response);
             }
         }
         xhttp.open("POST", "/champion/scrap", true);
