@@ -1,0 +1,19 @@
+<%- include('parts/header'); -%>
+
+<main>
+    <% if(typeof champions !== 'undefined') { %>
+        <% champions.forEach(function(champion){ %>
+            <div class="adv-container">
+              <div>
+                <h2><%- champion.name -%></h2>
+                <img src="<%- champion.img -%>"/>
+                <button name="button" data-action="single" data-url="<%- champion.url -%>">infos</button>
+              </div>
+            </div>
+        <% }); %>
+    <% } else {;%>
+        <h1>Aucun champion !</h1>
+    <% }; %>
+</main>
+
+<%- include('parts/footer'); -%>
